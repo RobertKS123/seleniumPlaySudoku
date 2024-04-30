@@ -95,8 +95,6 @@ public class ManageGrid{
     @ValueSource(strings = {"1", "2", "3", "4"})
     void doSudoku(String difficulty) throws InterruptedException {
         driver.get(url + difficulty);
-        Actions action = new Actions(driver);
-        action.sendKeys(Keys.F5).perform();
         solveSudoku();
     }
 
